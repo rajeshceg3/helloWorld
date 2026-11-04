@@ -4,7 +4,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {spawnSync} from 'node:child_process';
-const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../../../../..');
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../../../..');
 const source=path.join(root,'app.js'),out=path.join(root,'artifacts/verification');
 fs.mkdirSync(out,{recursive:true});
 const scratch=fs.mkdtempSync(path.join(os.tmpdir(),'verify-hello-world-'));
